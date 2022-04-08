@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te lo vendo</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'tiendita/css/styles.css'%}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="" class="logo">Tiendita</a>
+            <a class="btn" onclick="toggleMenu();">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </a>
+            <ul class="navigation">
+                <li><a href="{% url 'home' %}" style="--i:1;">Home</a></li>
+                <li><a href="#quienesSomos" style="--i:2;">Quienes Somos</a></li>
+                <li><a href="{% url 'productos' %}" style="--i:3;">Productos</a></li>
+                {% comment %} <li><a href="" style="--i:4;">Info3</a></li>
+                <li><a href="" style="--i:5;">Info4</a></li> {% endcomment %}
+            </ul>
+        </div>
+    </header>
+    {% block content %}{% endblock  %}
+    <footer>
+        <div class="rrss">
+            <a href="" style="--i:1;"><i class="fab fa-facebook-f"></i></a>
+            <a href="" style="--i:2;"><i class="fab fa-twitter"></i></a>
+            <a href="" style="--i:3;"><i class="fab fa-instagram"></i></a>
+            <a href="" style="--i:4;"><i class="fab fa-linkedin-in"></i></a>
+            <a href="" style="--i:5;"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+    <script src="{% static 'tiendita/js/main.js'%}"></script>
+</body>
+</html>
