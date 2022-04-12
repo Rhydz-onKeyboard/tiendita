@@ -1,1 +1,21 @@
-<h2> Holi </h2>
+{% extends 'base.html' %}
+{% block content %}
+
+
+<main class="productContainer">
+    <section class="grid">
+        <h3 class="tituloProduct"> Productos </h3>
+        {% for product in products  %}
+            <div class="productos">
+                <h2 class='nombreProducto'> {{ product.name | title }} </h2>
+                <p> Descripcion: {{product.description | title }} </p>
+                <p> Precio: ${{product.price}} </p>
+            </div>
+        {% endfor %}
+    </section>
+</main>
+
+{% endblock  %}
+
+
+

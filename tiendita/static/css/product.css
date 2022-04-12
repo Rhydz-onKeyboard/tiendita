@@ -1,0 +1,14 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+        'titulo titulo titulo'
+        'producto producto producto';
+}
+.tituloProduct{
+    grid-area: titulo;
+}
+.productos{
+    grid-area: producto;
+}

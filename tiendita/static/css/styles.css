@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300.400,500,600,700,800,900&display=swap');
 @import 'navbar.css';
 @import 'footer.css';
+@import 'product.css';
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +19,7 @@ header {
     padding: 100px;
     height: 20vh;
 }
-h3 {
+.scrollDown {
     position: absolute;
     top: 50%;
     left: 50%;
