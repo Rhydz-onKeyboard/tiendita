@@ -1,13 +1,18 @@
 .grid{
+    padding: 0rem 2rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2,1fr);
     grid-template-areas: 
-        'titulo titulo titulo'
-        'producto producto producto';
+        'titulo titulo titulo titulo'
+        'producto producto producto producto';
+    gap: 2rem;
 }
 .tituloProduct{
     grid-area: titulo;
+    justify-self: center;
+    color: #2d0255;
+    font-size: 4em;
 }
 .productos{
     grid-area: producto;
