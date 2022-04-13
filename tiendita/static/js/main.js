@@ -18,3 +18,7 @@ window.addEventListener('scroll', () => {
     innerText.style.left = 100 - value/5 +'%';
 
 })
+
+const pathName = window.location.pathname;
+console.log(pathName);
+
