@@ -1,0 +1,16 @@
+{% load static %}
+<div class="card" id="card">
+    <div >
+        <img src="{{ img }}" alt="" class="card-image">
+    </div>
+    <div class="card-text">
+        <h2>{{ name | capfirst }}</h2>
+        <p>{{ desc | capfirst }}</p>
+    </div>
+    <div class="card-stats">
+        <div class="stat">
+            <div class="value">$ {{ price | floatformat:"0" }}</div>
+            <div class="type">pesos</div>
+        </div>
+    </div>
+</div>

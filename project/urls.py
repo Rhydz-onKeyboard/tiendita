@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+import tiendita
+
 urlpatterns = [
-    path('admin', admin.site.urls),
+    path('', include('main.urls')),
+    path('admin/', admin.site.urls),
     path('parallax', include('parallax.urls')),
     path('tiendita', include('tiendita.urls')),
 ]

@@ -1,19 +1,23 @@
-.grid{
-    padding: 0rem 2rem;
+.productos{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px auto;
     grid-template-areas: 
-        'titulo titulo titulo titulo'
-        'producto producto producto producto';
-    gap: 2rem;
+        'titulo'
+        'deck';
 }
 .tituloProduct{
     grid-area: titulo;
     justify-self: center;
-    color: #2d0255;
+    color: var(--color-blue);
     font-size: 4em;
 }
-.productos{
-    grid-area: producto;
+.deck{
+    grid-area: deck;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-template-rows: auto;
+    gap: 2rem;
 }
+
+

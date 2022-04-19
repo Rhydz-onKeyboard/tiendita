@@ -2,6 +2,12 @@
 @import 'navbar.css';
 @import 'footer.css';
 @import 'product.css';
+@import 'card.css';
+:root {
+    --color-blue: hsl(270, 95%, 20%);
+    --color-lightblue: hsl(190, 90%, 40%);
+    --color-greyblue: hsl(270, 25%, 40%);
+}
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +19,22 @@ html {
 }
 body {
     overflow-x: hidden;
-    background: #0cb0c5;
+    background: var(--color-lightblue);
+    padding: 0rem 2rem;
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows: 15vh 1fr auto;
+    grid-template-areas: 
+        'navbar'
+        'contenido'
+        'footer';
+    gap: 2rem;
 }
 header {
-    padding: 100px;
-    height: 20vh;
+    grid-area: navbar;
+}
+main{
+    grid-area: contenido;
 }
 .scrollDown {
     position: absolute;
@@ -25,7 +42,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: -100px;
-    color: #2d0255;
+    color: var(--color-blue);
     font-size: 4em;
 }
 .titleScroll{
@@ -34,7 +51,7 @@ header {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: #2d0255;
+    background: var(--color-blue);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,14 +83,14 @@ header {
     font-size: 10vw;
     color: #b97cc4;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 3px #2d0255;
+    -webkit-text-stroke: 3px var(--color-blue);
     text-align: center;
     width: 100%;
 }
 .container {
     position: relative;
     margin-top: 200vh;
-    background: #2d0255;
+    background: var(--color-blue);
     padding: 100px;
     color: #fff;
 }
